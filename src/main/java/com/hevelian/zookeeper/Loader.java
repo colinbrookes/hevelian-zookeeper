@@ -11,6 +11,8 @@ public class Loader extends HttpServlet {
 	
 	@Override
 	public void init() throws ServletException {
+		server = new ZooKeeperServer();
+		server.startup();
 	}
 	
 }
