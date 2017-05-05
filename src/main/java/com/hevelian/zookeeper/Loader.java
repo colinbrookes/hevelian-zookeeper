@@ -17,12 +17,11 @@ public class Loader extends HttpServlet {
 
 	private static final long serialVersionUID = -6989750428431526717L;
 	private static final String contextName = "hevelian.zookeeper.home";
-	private Configuration configuration = null; //new Configuration(contextName);
+	private Configuration configuration = new Configuration(contextName);
 	private ZooKeeperServer server;
 	
 	@Override
 	public void init() throws ServletException {
-		configuration = new Configuration(contextName);
 		try {
 			server = new ZooKeeperServer(new File(configuration.getProperty("snap.directory")), 
 											new File(configuration.getProperty("log.directory")), Integer.parseInt(configuration.getProperty("tick.time")));
