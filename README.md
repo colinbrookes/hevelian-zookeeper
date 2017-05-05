@@ -7,7 +7,7 @@ Run Apache ZooKeeper as a WAR deployment in Tomcat and reduce the number of proc
 To run:
 modify Tomcat context.xml to include one Environment parameter "hevelian.zookeeper.home", for example:
 
-<Environment name="hevelian.zookeeper.home" value="/hevelian/zookeeper" type="java.lang.String"/>
+lt;Environment name="hevelian.zookeeper.home" value="/hevelian/zookeeper" type="java.lang.String"/&gt;
 
 In the home folder create three folders, "conf", "log" and "data". 
 In "conf" folder create a file "hevelian.properties" and add the following to the file:
