@@ -16,20 +16,19 @@ import org.apache.zookeeper.server.ZooKeeperServer;
 public class Loader extends HttpServlet {
 
 	private static final long serialVersionUID = -6989750428431526717L;
-	private static final String snapDir = "/Users/cb/Development/hevelian/zookeeper/data";
-	private static final String logDir = "/Users/cb/Development/hevelian/zookeeper/log";
-	private static final int port = 2181;
-	private static final int maxClients = 100;
-	
+	private static final String contextName = "hevelian.zookeeper.home";
+	private Configuration configuration = null; //new Configuration(contextName);
 	private ZooKeeperServer server;
 	
 	@Override
 	public void init() throws ServletException {
+		configuration = new Configuration(contextName);
 		try {
-			server = new ZooKeeperServer(new File(snapDir), new File(logDir), ZooKeeperServer.DEFAULT_TICK_TIME);
+			server = new ZooKeeperServer(new File(configuration.getProperty("snap.directory")), 
+											new File(configuration.getProperty("log.directory")), Integer.parseInt(configuration.getProperty("tick.time")));
 
 			ServerCnxnFactory factory = new NIOServerCnxnFactory();
-		    factory.configure(new InetSocketAddress(port), maxClients);
+		    factory.configure(new InetSocketAddress(Integer.parseInt(configuration.getProperty("client.port"))), Integer.parseInt(configuration.getProperty("max.clients")));
 			factory.startup(server);
 		} catch (Exception e) {
 			e.printStackTrace();
