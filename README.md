@@ -18,4 +18,4 @@ log.directory=/hevelian/zookeeper/log<br/>
 tick.time=3000<br/>
 max.clients=100<br/>
 
-Change the snap.directory and log.directory to point to the filders you created of course :)
+Change the snap.directory and log.directory to point to the folders you created of course :)
