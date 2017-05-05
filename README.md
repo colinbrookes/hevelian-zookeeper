@@ -12,10 +12,10 @@ modify Tomcat context.xml to include one Environment parameter "hevelian.zookeep
 In the home folder create three folders, "conf", "log" and "data". 
 In "conf" folder create a file "hevelian.properties" and add the following to the file:
 
-client.port=2181
-snap.directory=/hevelian/zookeeper/data
-log.directory=/hevelian/zookeeper/log
-tick.time=3000
-max.clients=100
+client.port=2181<br/>
+snap.directory=/hevelian/zookeeper/data<br/>
+log.directory=/hevelian/zookeeper/log<br/>
+tick.time=3000<br/>
+max.clients=100<br/>
 
 Change the snap.directory and log.directory to point to the filders you created of course :)
