@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Hevelian/hevelian-zookeeper.svg?branch=master)](https://travis-ci.org/Hevelian/hevelian-zookeeper)
+[![Build Status](https://travis-ci.org/Hevelian/hevelian-zookeeper.svg?branch=master)](https://travis-ci.org/Hevelian/hevelian-zookeeper) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000?style=flat-square)]()
 
 # hevelian-zookeeper
 
