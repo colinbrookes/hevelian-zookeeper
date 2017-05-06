@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Hevelian/hevelian-zookeeper.svg?branch=master)](https://travis-ci.org/Hevelian/hevelian-zookeeper)
+
 # hevelian-zookeeper
 
 Enterprise class software for the rest of us.
